@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+textarea {
+    width: 100%;
+    max-width: 600px;
+}
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}

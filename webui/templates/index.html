@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>JARVIS Code Brain</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body style='font-family: sans-serif'>
+    <h2>JARVIS Code Brain</h2>
+    <textarea id='msg' rows='6' cols='80'></textarea><br><br>
+    <button onclick='send()'>Send</button>
+    <pre id='out'></pre>
+    <script>
+      async function send() {
+        const msg = document.getElementById('msg').value;
+        const res = await fetch('/chat', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({message: msg})
+        });
+        const data = await res.json();
+        document.getElementById('out').innerText = JSON.stringify(data, null, 2);
+      }
+    </script>
+  </body>
+</html>

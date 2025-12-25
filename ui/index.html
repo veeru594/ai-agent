@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JARVIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-gray-100 h-screen flex flex-col">
+
+    <header class="p-4 border-b border-gray-800 text-xl font-semibold">
+        JARVIS
+    </header>
+
+    <main id="chat" class="flex-1 overflow-y-auto p-4 space-y-4"></main>
+
+    <footer class="p-4 border-t border-gray-800 flex gap-2">
+        <input id="input" class="flex-1 bg-gray-900 border border-gray-700 rounded px-3 py-2 outline-none"
+            placeholder="Ask JARVIS..." />
+        <button id="send" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded font-medium">
+            Send
+        </button>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
